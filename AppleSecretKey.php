@@ -5,12 +5,12 @@ use Firebase\JWT\JWT;
 
 class AppleSecretKey
 {
-    static function generateAppleClientSecret()
+    static function generateAppleClientSecret():String
     {
         $teamId = env('APPLE_TEAM_ID');
         $clientId = env('APPLE_CLIENT_ID');
         $keyId = env('APPLE_KEY_ID');
-        $privateKeyPath = base_path('AppleCredentials/Credentials.p8');
+        $privateKeyPath = "PATH OF .p8 file ";
 
         $privateKey = file_get_contents($privateKeyPath);
 
